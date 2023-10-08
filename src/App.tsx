@@ -1,5 +1,9 @@
 import React from 'react';
 import './App.css';
+import {StyledBtn} from './components/Button.styled'
+import {SuperBtn} from './components/Button.styled'
+import {Link} from './components/Link.styled'
+import {Menu} from './components/Menu.styled'
 import styled from "styled-components";
 
 function App() {
@@ -28,36 +32,6 @@ function App() {
 
 export default App;
 
-const StyledBtn = styled.button`
-border: none;
-  background-color: #06e186;
-  padding: 10px 20px;
-  color: white;
-  font-size: 16px;
-
-  &:hover {
-background-color: #085233;
-  }
-
-  &:last-child {
-    background-color: #f7f30bec;
-  }
-`
-
-const Link = styled.a`
-  color: #96f30b;
-  font-size: 16px;
-  font-weight: bold;
-  background-color: transparent;
-  padding: 0;
-`
-
-const SuperBtn = styled(StyledBtn)`
-  border-radius: 5px;
-  background-color: red;
-  color: greenyellow;
-`
-
 const Box = styled.div `
 display: flex;
   height: 100vh;
@@ -72,22 +46,8 @@ display: flex;
   ${Link} {
     cursor: zoom-in;
   }
-`
 
-const Menu = styled.nav `
-ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
 }
-
-li > a {
-  color: green;
-}
-
-li + li {
-  margin-left: 20px;
-}
-
 `
